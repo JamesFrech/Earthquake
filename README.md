@@ -18,3 +18,10 @@ You can install the released version of Earthquake from
 ``` r
 install.packages("Earthquake")
 ```
+
+And the development version from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("JamesFrech/Earthquake")
+```
