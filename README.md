@@ -5,6 +5,8 @@
 
 <!-- badges: start -->
 
+[![Travis build
+status](https://travis-ci.com/JamesFrech/Earthquake.svg?branch=master)](https://travis-ci.com/JamesFrech/Earthquake)
 <!-- badges: end -->
 
 The goal of Earthquake is to map earthquake data on timelines and their
