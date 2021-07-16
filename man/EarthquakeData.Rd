@@ -7,7 +7,7 @@
 \format{
 A data frame with 6,243 rows and 39 columns:
 \describe{
-  \item{Search parameter}{Search Parameter for database (not important)}
+  \item{Search Parameters}{Search Parameter for database (not important)}
   \item{Year}{The year of the earthquake}
   \item{Mo}{The month of the earthquake}
   \item{Dy}{The day of the earthquake}
