@@ -101,8 +101,8 @@ geom_timeline <- function(mapping = NULL, data = NULL, stat = "identity", positi
   )
 }
 
-testplot1 <- ggplot(testdata) +
-  geom_timeline(aes(x = Date, y = 1))
+testplot1 <- ggplot2::ggplot(testdata) +
+  geom_timeline(ggplot2::aes(x = Date, y = 1))
 
 testthat::expect_that(testplot1, testthat::is_a("gg"))
 
@@ -139,9 +139,9 @@ geom_timelinelabel <- function(mapping = NULL, data = NULL, stat = "identity", p
   )
 }
 
-testplot2 <- ggplot(testdata) +
-  geom_timeline(aes(x = Date, y = 1)) +
-  geom_timelinelabel(data = testdata[1:5,], aes(x = Date, y = 1, label = Country))
+testplot2 <- ggplot2::ggplot(testdata) +
+  geom_timeline(ggplot2::aes(x = Date, y = 1)) +
+  geom_timelinelabel(data = testdata[1:5,], ggplot2::aes(x = Date, y = 1, label = Country))
 
 testthat::expect_that(testplot2, testthat::is_a("gg"))
 
@@ -171,7 +171,7 @@ eq_map <- function(df, annot_col, color = "blue", radius = 5, weight = 1){
 }
 
 testmap1 <- testdata %>%
-   filter(Country == "Mexico" & year(Date) >= 2000) %>%
+   dplyr::filter(Country == "Mexico" & lubridate::year(Date) >= 2000) %>%
    eq_map(annot_col = .$Date)
 
 testthat::expect_that(testmap1, testthat::is_a("leaflet"))
@@ -185,8 +185,8 @@ eq_create_label <- function(df){
 }
 
 testmap2 <- testdata %>%
-  filter(Country == "Mexico" & year(Date) >= 2000) %>%
-  mutate(popup = eq_create_label(.)) %>%
+  dplyr::filter(Country == "Mexico" & lubridate::year(Date) >= 2000) %>%
+  dplyr::mutate(popup = eq_create_label(.)) %>%
   eq_map(annot_col = .$popup)
 
 testthat::expect_that(testmap2, testthat::is_a("leaflet"))
