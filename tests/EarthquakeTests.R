@@ -1,4 +1,5 @@
 # Function Tests
+library(dplyr)
 
 # Function 1: read_earthquake_data
 read_earthquake_data <- function(file){
