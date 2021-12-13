@@ -14,6 +14,12 @@ epicenters on widget maps.
 
 ## Installation
 
+You can install the released version of Earthquake from CRAN with:
+
+``` r
+install.packages("Earthquake")
+```
+
 You can install the development version from
 [GitHub](https://github.com/) with:
 

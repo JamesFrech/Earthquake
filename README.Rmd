@@ -23,6 +23,11 @@ The goal of Earthquake is to map earthquake data on timelines and their epicente
 
 ## Installation
 
+You can install the released version of Earthquake from CRAN with:
+
+``` r
+install.packages("Earthquake")
+```
 
 You can install the development version from [GitHub](https://github.com/) with:
 
